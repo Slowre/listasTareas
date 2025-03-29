@@ -98,3 +98,16 @@ body {
         scale: 1.1;
     }
 }
+
+.overlay {
+    position: absolute;
+    background: #111;
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 350px;
+    align-items: center;
+    display: none;
+    transition: all 0.2s ease;
+    cursor: pointer;    
+}

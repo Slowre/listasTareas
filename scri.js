@@ -1,21 +1,20 @@
 const $ = (el) => document.querySelector(el);
 const $$ = (el) => document.querySelectorAll(el);
 
-//const addTareaButton = $('#add-tarea')
-//const modal = $('#modal-add-tarea')
-//const closeModalAddTarea = $('#closeModalBtn')
+
 const addTareaButton = document.getElementById("add-tarea");
 const modal = document.getElementById("modal-add-tarea");
 const closeModalAddTarea = document.getElementById("closeModalBtn");
+const containformAddList = document.getElementById("contain-form-add-list");
 
-function abrirModal(modalTemp) {
+function openModal(modalTemp) {
   modalTemp.style.display = "flex";
   setTimeout(() => {
     modalTemp.classList.add("show");
   }, 50);
 }
 
-function cerrarModal(modalTemp) {
+function closeModal(modalTemp) {
   modalTemp.classList.remove("show");
   setTimeout(() => {
     modalTemp.style.display = "none";
@@ -23,14 +22,11 @@ function cerrarModal(modalTemp) {
 }
 
 addTareaButton.addEventListener("click", () => {
-  abrirModal(modal);
-});
-closeModalAddTarea.addEventListener("click", () => {
-  cerrarModal(modal);
+  addTareaButton.style.display = "none";
+  containformAddList.style.display = "flex";
 });
 
-window.addEventListener("click", (event) => {
-  if (event.target == modal) {
-    cerrarModal(modal);
-  }
+containformAddList.addEventListener("click", () => {
+  containformAddList.style.display = "none"; 
+    addTareaButton.style.display = "flex"; 
 });
