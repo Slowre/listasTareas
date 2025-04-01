@@ -24,20 +24,64 @@ body {
     margin: 10px;
     border-radius: 5px;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
-.colum-list{
-    width: 350px;
-    padding: 5px 10px;
+
+.colum-list {
+    width: 272px;
+    height: fit-content;
     border-radius: 5px;
+    display: flex;
+    background: #111;
+
+    &.colum-list-tareas {
+        min-height: 50px;
+        padding-bottom: 8px;
+
+        & .containt-list {
+            width: 100%;
+
+            & .container-title-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-inline: 8px;
+                padding-top: 8px;
+
+                & .title-list {
+                    font-size: medium;
+                    font-weight: 500;
+                    padding: 6px;
+                    width: 100%;
+                }
+
+                & .menu-list {
+                    flex-shrink: 0;
+                    border-radius: 5px;
+                    padding: 2px;
+                    width: 32px;
+                    height: 32px;
+                    background: transparent;
+
+                    &:hover {
+                        background: #444;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .colum-add {
-    background: #444;    
-    height: 50px;    
+    background: #444 !important;
+    height: 50px !important;
     align-items: center;
-    display: flex;
     transition: all 0.2s ease;
     cursor: pointer;
+    padding: 5px 10px;
+
     & label {
         font-size: medium;
         display: flex;
@@ -132,7 +176,7 @@ body {
     }
 }
 
-.button-submit-accept{
+.button-submit-accept {
     background: #1c3dfd;
     border-radius: 5px;
     font-size: medium;
@@ -141,8 +185,8 @@ body {
     border: none;
     padding: 5px 10px;
     color: inherit;
-    
-    &:hover{
+
+    &:hover {
         background: #4661ff;
     }
 }
@@ -160,12 +204,13 @@ body {
     justify-content: center;
     display: flex;
     border-radius: 5px;
-    &:hover{
+
+    &:hover {
         background: #333;
     }
 }
 
-.content-button-add-list{
+.content-button-add-list {
     display: flex;
     gap: 10px;
 }
