@@ -100,14 +100,71 @@ body {
 }
 
 .overlay {
-    position: absolute;
     background: #111;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
-    height: 50px;
+    height: fit-content;
     width: 350px;
-    align-items: center;
     display: none;
+    flex-direction: column;
+    align-items: stretch;
     transition: all 0.2s ease;
-    cursor: pointer;    
+    gap: 100px;
+}
+
+
+
+.input-max-width {
+    width: 100%;
+    background: transparent;
+    border: solid 1px #1c3dfd;
+    border-radius: 5px;
+    font-size: larger;
+    padding: 10px;
+    color: aliceblue;
+    outline: none;
+    margin-bottom: 10px;
+
+    &:focus {
+        border: solid 1px #8d9eff !important;
+
+    }
+}
+
+.button-submit-accept{
+    background: #1c3dfd;
+    border-radius: 5px;
+    font-size: medium;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    color: inherit;
+    
+    &:hover{
+        background: #4661ff;
+    }
+}
+
+.button-without-background {
+    background: none;
+    border: none;
+    font: inherit;
+    color: #999;
+    cursor: pointer;
+    outline: none;
+    font-size: large;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 5px;
+    &:hover{
+        background: #333;
+    }
+}
+
+.content-button-add-list{
+    display: flex;
+    gap: 10px;
 }

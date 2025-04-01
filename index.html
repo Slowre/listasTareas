@@ -41,7 +41,17 @@
         </label>
       </div>
       <div class="overlay" id="contain-form-add-list">
-        <p>Formulario o contenido extra aquí</p>
+        <!-- <p>Formulario o contenido extra aquí</p> -->
+        <form id="form-add-list">
+          <input type="text" class="input-max-width" placeholder="Ingrese el nombre de la lista" name="newListName" id="newListName"/>
+          <div class="content-button-add-list">
+            <button type="submit" class="button-submit-accept">Añadir lista</button>
+            <button class="button-without-background" id="close-form-add-list">
+              <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  ><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+            </button>
+          </div>
+          
+        </form>
       </div>
     </section>
 
