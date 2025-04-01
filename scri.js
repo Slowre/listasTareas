@@ -6,9 +6,9 @@ const containformAddList = document.getElementById("contain-form-add-list");
 const closeformAddListButton = document.getElementById("close-form-add-list");
 const formAddList = document.getElementById("form-add-list");
 
-let isFormAddListVisible = false;
 const DISPLAY_FLEX = "flex";
 const DISPLAY_NONE = "none";
+let isFormAddListVisible = false;
 
 function changeFormAddlistVisibility() {
   if (isFormAddListVisible) {
