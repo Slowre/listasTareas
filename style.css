@@ -25,18 +25,19 @@ body {
     border-radius: 5px;
     padding: 10px;
 }
-
-.colum-add {
-    background: #444;
+.colum-list{
+    width: 350px;
     padding: 5px 10px;
     border-radius: 5px;
-    height: 50px;
-    width: 350px;
+}
+
+.colum-add {
+    background: #444;    
+    height: 50px;    
     align-items: center;
     display: flex;
     transition: all 0.2s ease;
     cursor: pointer;
-
     & label {
         font-size: medium;
         display: flex;

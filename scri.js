@@ -37,6 +37,18 @@ window.addEventListener("click", (event) => {
   }
 });
 
+formAddList.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const data = {};
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+  const dataForm = Object.fromEntries(formData);
+  const dato = JSON.stringify(dataForm);
+ 
+});
+
 // const modal = document.getElementById("modal-add-tarea");
 // const closeModalAddTarea = document.getElementById("closeModalBtn");
 
