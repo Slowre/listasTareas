@@ -28,7 +28,7 @@ closeformAddListButton.addEventListener("click", changeFormAddlistVisibility);
 
 window.addEventListener("click", (event) => {
   if (
-    event.target != addTareaButton &&
+    !event.target.closest("#add-tarea") &&
     !event.target.closest("#contain-form-add-list")
   ) {
     if (isFormAddListVisible) {
