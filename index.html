@@ -20,7 +20,7 @@
       <h1>Tareas</h1>
     </header>
     <section id="container-flujo">
-      <div class="colum-list colum-list-tareas">
+      <!-- <div class="colum-list colum-list-tareas">
         <div class="containt-list">
           <div class="container-title-list">
             <label class="title-list">sdsad</label>
@@ -42,12 +42,64 @@
               <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
             </svg>
           </div>
-          <div class="container-tareas-list">
-
+          <div class="container-tareas-list"></div>
+          <div class="container-add-tarea">
+            <label>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 5l0 14" />
+                <path d="M5 12l14 0" />
+              </svg>
+              Añadir nueva tarea
+            </label>
+          </div>
+          <div class="contain-adds contain-form-add-tareas" id="contain-form-add-tarea">
+            <form id="form-add-tarea" class="form-add-tarea">
+              <input
+                type="text"
+                class="input-max-width"
+                placeholder="Ingrese el nombre de la tarea"
+                name="newTareaName"
+                id="newTareaName"
+                autocomplete="off"
+              />
+              <div class="content-button-adds">
+                <button type="submit" class="button-submit-accept">
+                  Añadir tarea
+                </button>
+                <button class="button-without-background" id="close-form-add-tarea">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M18 6l-12 12" />
+                    <path d="M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="colum-add colum-list" id="add-tarea">
+      </div> -->
+      <div class="colum-add colum-list" id="add-lista">
         <label>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +119,7 @@
           Añadir nueva lista
         </label>
       </div>
-      <div class="overlay" id="contain-form-add-list">
-        <!-- <p>Formulario o contenido extra aquí</p> -->
+      <div class="contain-adds" id="contain-form-add-list">
         <form id="form-add-list">
           <input
             type="text"
@@ -78,7 +129,7 @@
             id="newListName"
             autocomplete="off"
           />
-          <div class="content-button-add-list">
+          <div class="content-button-adds">
             <button type="submit" class="button-submit-accept">
               Añadir lista
             </button>
@@ -103,14 +154,14 @@
         </form>
       </div>
     </section>
-
+<!-- 
     <div id="modal-add-tarea" class="modal">
       <div class="modal-content">
         <span id="closeModalBtn" class="close"> &times; </span>
         <h2>Agregar nueva tarea</h2>
         <p>texto</p>
       </div>
-    </div>
+    </div> -->
 
     <script src="scri.js"></script>
   </body>

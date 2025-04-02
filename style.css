@@ -22,7 +22,7 @@ body {
     height: 100vh;
     min-width: max-content;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 10px;
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@ body {
 .colum-list {
     width: 272px;
     height: fit-content;
-    border-radius: 5px;
+    border-radius: 8px;
     display: flex;
     background: #111;
 
@@ -59,7 +59,7 @@ body {
 
                 & .menu-list {
                     flex-shrink: 0;
-                    border-radius: 5px;
+                    border-radius: 8px;
                     padding: 2px;
                     width: 32px;
                     height: 32px;
@@ -72,6 +72,31 @@ body {
             }
         }
     }
+}
+
+
+.container-add-tarea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 8px;
+    padding-top: 8px;
+
+    & label {
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+        font-size: medium;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover {
+            background: #444;
+        }
+    }
+
+
+
 }
 
 .colum-add {
@@ -96,7 +121,86 @@ body {
     }
 }
 
-.modal {
+
+
+.contain-adds {
+    background: #111;
+    padding: 10px;
+    border-radius: 8px;
+    height: fit-content;
+    width: 272px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    transition: all 0.2s ease;
+    gap: 100px;
+
+    & .input-max-width {
+        width: 100%;
+        background: transparent;
+        border: solid 1px #1c3dfd;
+        border-radius: 8px;
+        font-size: medium;
+        padding: 10px;
+        color: aliceblue;
+        outline: none;
+        margin-bottom: 10px;
+
+        &:focus {
+            border: solid 1px #8d9eff !important;
+
+        }
+    }
+
+    & .button-submit-accept {
+        background: #1c3dfd;
+        border-radius: 8px;
+        font-size: medium;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        padding: 5px 10px;
+        color: inherit;
+    
+        &:hover {
+            background: #4661ff;
+        }
+    }
+    
+    & .button-without-background {
+        background: none;
+        border: none;
+        font: inherit;
+        color: #999;
+        cursor: pointer;
+        outline: none;
+        font-size: large;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 8px;
+    
+        &:hover {
+            background: #333;
+        }
+    }
+    
+    & .content-button-adds {
+        display: flex;
+        gap: 10px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+/* .modal {
     display: none;
     position: fixed;
     top: 0;
@@ -113,7 +217,7 @@ body {
 
     &.show {
         display: flex;
-        /* Se muestra antes de la animación */
+        
         opacity: 1;
         visibility: visible;
     }
@@ -123,7 +227,7 @@ body {
     color: black;
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 80%;
     max-width: 500px;
     position: relative;
@@ -142,75 +246,4 @@ body {
     &:hover {
         scale: 1.1;
     }
-}
-
-.overlay {
-    background: #111;
-    padding: 10px;
-    border-radius: 5px;
-    height: fit-content;
-    width: 350px;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    transition: all 0.2s ease;
-    gap: 100px;
-}
-
-
-
-.input-max-width {
-    width: 100%;
-    background: transparent;
-    border: solid 1px #1c3dfd;
-    border-radius: 5px;
-    font-size: larger;
-    padding: 10px;
-    color: aliceblue;
-    outline: none;
-    margin-bottom: 10px;
-
-    &:focus {
-        border: solid 1px #8d9eff !important;
-
-    }
-}
-
-.button-submit-accept {
-    background: #1c3dfd;
-    border-radius: 5px;
-    font-size: medium;
-    outline: none;
-    cursor: pointer;
-    border: none;
-    padding: 5px 10px;
-    color: inherit;
-
-    &:hover {
-        background: #4661ff;
-    }
-}
-
-.button-without-background {
-    background: none;
-    border: none;
-    font: inherit;
-    color: #999;
-    cursor: pointer;
-    outline: none;
-    font-size: large;
-    font-weight: 500;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-radius: 5px;
-
-    &:hover {
-        background: #333;
-    }
-}
-
-.content-button-add-list {
-    display: flex;
-    gap: 10px;
-}
+} */
