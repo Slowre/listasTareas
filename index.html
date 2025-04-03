@@ -16,12 +16,11 @@
   </head>
 
   <body>
-    <header id="top-header" style="display: flex; flex-direction: column;">
+    <header id="top-header" style="display: flex; flex-direction: column">
       <h1>Tareas</h1>
-      <button id="reset-local"> RESET</button>
+      <button id="reset-local">RESET</button>
     </header>
     <section id="container-flujo">
-      
       <div class="colum-add colum-list" id="add-lista">
         <label>
           <svg
@@ -77,7 +76,7 @@
         </form>
       </div>
     </section>
-<!-- 
+    <!-- 
     <div id="modal-add-tarea" class="modal">
       <div class="modal-content">
         <span id="closeModalBtn" class="close"> &times; </span>
@@ -86,12 +85,17 @@
       </div>
     </div> -->
 
-   
+    <div class="context-menu-tarea" id="context-menu-tarea">
+      <ul>
+        <li onclick="eliminarTarea()">Borrar tarea</li>
+      </ul>
+    </div>
+
+    <div class="blur-div" id="blur-div"></div>
 
     <script src="scri.js"></script>
   </body>
 </html>
-
 
 <!-- <div class="colum-list colum-list-tareas">
   <div class="containt-list">

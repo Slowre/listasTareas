@@ -18,6 +18,10 @@ const containAddTareasForm = document.querySelectorAll(
 const closeTareasForm = document.querySelectorAll("#close-form-add-tarea");
 const addTareaForm = document.querySelectorAll(".form-add-tarea");
 
+const blurWindow = document.querySelector(".blur-div");
+
+let tareaSeleccionada = null;
+
 const DISPLAY_FLEX = "flex";
 const DISPLAY_NONE = "none";
 let isFormAddListVisible = false;
@@ -102,6 +106,19 @@ window.addEventListener("click", (event) => {
         button.style.display = DISPLAY_FLEX;
       }
     });
+  }
+  const containerContextMenuTarea = event.target.closest(".context-menu-tarea");
+  console.log("Click");
+  if (!containerContextMenuTarea) {
+    const containerTarea = event.target.closest(".containt-tarea");
+    if (containerTarea) {
+      return;
+    }
+    if (tareaSeleccionada) {
+      contextMenuTarea.style.display = "none";
+      tareaSeleccionada.style.zIndex = "0";
+      blurWindow.style.display = "none";
+    }
   }
 });
 
@@ -264,10 +281,12 @@ function setupDynamicEvents() {
   document.removeEventListener("click", handleClickEvents);
   document.removeEventListener("submit", handleSubmitEvents);
   document.removeEventListener("change", handleChangeEvents);
+  document.removeEventListener("contextmenu", handleMenuContextEvents);
 
   document.addEventListener("click", handleClickEvents);
   document.addEventListener("submit", handleSubmitEvents);
   document.addEventListener("change", handleChangeEvents);
+  document.addEventListener("contextmenu", handleMenuContextEvents);
 }
 
 function handleChangeEvents(event) {
@@ -320,6 +339,40 @@ function handleSubmitEvents(event) {
     } else {
       console.log("presiono x input vacio pero hizo submit");
     }
+  }
+}
+
+const contextMenuTarea = document.getElementById("context-menu-tarea");
+
+function handleMenuContextEvents(event) {
+  event.preventDefault();
+  const tarea = event.target.closest(".containt-tarea");
+  if (tarea) {
+    blurWindow.style.display = "block";
+    contextMenuTarea.style.display = "block";
+    const distancia = (tarea.offsetHeight - contextMenuTarea.offsetHeight) / 2;
+    contextMenuTarea.style.top = `${tarea.offsetTop + distancia}px`;
+    contextMenuTarea.style.left = `${tarea.offsetLeft + tarea.offsetWidth}px`;
+    tareaSeleccionada = tarea;
+    tarea.style.zIndex = "1";
+    console.log(tarea.style.zIndex);
+  }
+  if (event.target == blurWindow) {
+    tareaSeleccionada.style.zIndex = "0";
+    blurWindow.style.display = "none";
+    contextMenuTarea.style.display = "none";
+  }
+}
+
+function eliminarTarea() {
+  if (tareaSeleccionada) {
+    tareaSeleccionada.style.zIndex = "0";
+    tareaSeleccionada.remove();
+    contextMenuTarea.style.display = "none";
+    blurWindow.style.display = "none";
+    tareaSeleccionada = null;
+    setInfoToStorage();
+    setupDynamicEvents();
   }
 }
 

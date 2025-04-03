@@ -79,7 +79,9 @@ body {
                 padding: 8px;
 
                 & .containt-tarea {
+                    
                     border-radius: 8px;
+                    position: relative;
                     background: #222;
                     display: flex;
                     align-items: center;
@@ -226,7 +228,48 @@ body {
 
 }
 
+.context-menu-tarea {
+    position: absolute;
+    background: transparent !important;
+    display: none;
+    z-index: 1;
+    margin-left: 10px;
+}
 
+.context-menu-tarea ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+    gap: 5px;
+}
+
+.context-menu-tarea ul li {
+    background: #2C333A;
+    border-radius: 3px;
+    padding: 6px 12px 6px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #b6c2cf;
+    white-space: nowrap;
+}
+
+.context-menu-tarea ul li:hover {
+    background: #454f5a;
+}
+.blur-div {
+    display: none;
+    position: fixed; /* Fija el div en la ventana */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+    height: 100%; /* Ocupa el 100% del alto de la pantalla */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente (opcional) */
+    z-index: 0; /* Asegura que esté por encima de otros elementos */
+    backdrop-filter: blur(2px); /* Aplica un efecto de desenfoque al fondo */
+  }
 
 
 
