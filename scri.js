@@ -108,7 +108,6 @@ window.addEventListener("click", (event) => {
     });
   }
   const containerContextMenuTarea = event.target.closest(".context-menu-tarea");
-  console.log("Click");
   if (!containerContextMenuTarea) {
     const containerTarea = event.target.closest(".containt-tarea");
     if (containerTarea) {
