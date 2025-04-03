@@ -45,16 +45,20 @@ body {
 
             & .container-title-list {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
+                justify-content: right;
                 padding-inline: 8px;
                 padding-top: 8px;
+                width: 100%;
 
                 & .title-list {
                     font-size: medium;
                     font-weight: 500;
                     padding: 6px;
-                    width: 100%;
+                    justify-content: left;
+                    overflow: hidden;
+                        overflow-wrap: break-word;
+                        white-space: normal;
+                        width: 100%;
                 }
 
                 & .menu-list {
