@@ -56,9 +56,9 @@ body {
                     padding: 6px;
                     justify-content: left;
                     overflow: hidden;
-                        overflow-wrap: break-word;
-                        white-space: normal;
-                        width: 100%;
+                    overflow-wrap: break-word;
+                    white-space: normal;
+                    width: 100%;
                 }
 
                 & .menu-list {
@@ -90,7 +90,6 @@ body {
 
                     & .custom-checkbox input[type="checkbox"] {
                         height: 20px;
-
                         width: 20px;
                         min-width: 20px;
                         min-height: 20px;
@@ -226,8 +225,6 @@ body {
 
 
 }
-
-
 
 
 
